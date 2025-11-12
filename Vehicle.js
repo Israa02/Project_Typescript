@@ -5,8 +5,13 @@ var Car = /** @class */ (function () {
         this.model = model;
         this.year = year;
     }
+    ;
     Car.prototype.start = function () {
         console.log("Car engine started");
+    };
+    ;
+    Car.prototype.addHorsePower = function (puissance) {
+        this.horesePower = puissance;
     };
     ;
     return Car;
@@ -14,5 +19,5 @@ var Car = /** @class */ (function () {
 ;
 var newCar = new Car("Toyota", "mmmmmm", 2014);
 newCar.start();
-console.log("1", newCar);
-console.log("2", newCar.start());
+newCar.addHorsePower(2000);
+console.log(newCar);
